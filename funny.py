@@ -43,12 +43,17 @@ def total_pay_net(hours, hourly_pay):
     Returns
     -------
     float
+        the gross pay expected
         the net pay expected'''
     gross_pay = hours * hourly_pay
     net_pay = gross_pay * 0.90
+    monthly_payment = net_pay * 4
+    print(f'Your gross pay is: ${gross_pay:.2f}')
     print(f'Your net pay is: ${net_pay:.2f}')
+    print(f'You montlhy pay is: ${monthly_payment:.2f}')
+    
 
-    return net_pay
+    return net_pay, gross_pay, monthly_payment
 print('Introduce horas trabajadas')
 horas = input()
 print('Introduce pago por horas')
